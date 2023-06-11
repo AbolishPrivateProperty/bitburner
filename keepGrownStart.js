@@ -13,9 +13,9 @@ export async function main(ns) {
 		percent = ns.args[2];
 	}
 	if (ns.getHostname() != 'home') {
-		await ns.scp('grow.ns', 'home', ns.getHostname());
+		await ns.scp('grow.js', 'home', ns.getHostname());
 	}
-    var growram = ns.getScriptRam('grow.ns', 'home');  
+    var growram = ns.getScriptRam('grow.js', 'home');  
 	var avsram = (ns.getServerMaxRam(ns.getHostname()) - ns.getServerUsedRam(ns.getHostname())) * (percent / 100);
 	ns.print((avsram / growram) + " / 60");
 	var gsThreads = Math.round((avsram / growram) / iterations);
@@ -30,7 +30,7 @@ export async function main(ns) {
 	while (true) {
 		growTime = ns.getGrowTime(serverName);
 		for (var i = 0; i < iterations; i++) {
-			ns.run('grow.ns', gsThreads, serverName, i);
+			ns.run('grow.js', gsThreads, serverName, i);
 			await ns.sleep(Math.ceil(growTime / iterations));
 		}
 		await ns.sleep(1000);

@@ -44,25 +44,25 @@ export async function main(ns) {
 	const growValues = {
 		'grow': {
 			"percent": 70,
-			"threads": 32,
+			"threads": 64,
 		},
 		'weaken': {
 			"percent": 30,
-			"threads": 40,
+			"threads": 80,
 		},
 	};
 	const hackValues = {
 		'hack': {
 			"percent": 10,
-			"threads": 10,
+			"threads": 20,
 		},
 		'grow': {
 			"percent": 75,
-			"threads": 32,
+			"threads": 64,
 		},
 		'weaken': {
 			"percent": 15,
-			"threads": 80,
+			"threads": 160,
 		},
 	};
 	var profitDelay = 60 * 60; // Wait an hour after starting to hack a server before moving on

@@ -13,10 +13,10 @@ export async function main(ns) {
 		percent = ns.args[2];
 	}
 	if (ns.getHostname() != 'home') {
-		await ns.scp('weaken.ns', 'home', ns.getHostname());
+		await ns.scp('weaken.js', 'home', ns.getHostname());
 	}
 	await ns.sleep(200);
-    var weakenram = ns.getScriptRam('weaken.ns', 'home');  
+    var weakenram = ns.getScriptRam('weaken.js', 'home');  
 	var avsram = (ns.getServerMaxRam(ns.getHostname()) - ns.getServerUsedRam(ns.getHostname())) * (percent / 100);
 	var wsThreads = Math.floor((avsram / weakenram) / iterations);
 	
@@ -27,7 +27,7 @@ export async function main(ns) {
 	while (true) {
 		var weakenTime = ns.getWeakenTime(serverName);
 		for (var i = 0; i < iterations; i++) {
-			ns.run('weaken.ns', wsThreads, serverName, i);
+			ns.run('weaken.js', wsThreads, serverName, i);
 			await ns.sleep(Math.ceil(weakenTime / iterations));
 		}
 		await ns.sleep(1000);

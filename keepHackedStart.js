@@ -13,9 +13,9 @@ export async function main(ns) {
 		percent = ns.args[2];
 	}
 	if (ns.getHostname() != 'home') {
-		await ns.scp('justhack.ns', 'home', ns.getHostname());
+		await ns.scp('justhack.js', 'home', ns.getHostname());
 	}
-	var hackram = ns.getScriptRam('justhack.ns', 'home'); 
+	var hackram = ns.getScriptRam('justhack.js', 'home'); 
 	var avsram = (ns.getServerMaxRam(ns.getHostname()) - ns.getServerUsedRam(ns.getHostname())) * (percent / 100);
 	var hsThreads = Math.round((avsram / hackram) / iterations);
 	var nthreads2h = Math.ceil((.5/ns.hackAnalyze(serverName)));
@@ -31,7 +31,7 @@ export async function main(ns) {
 	while (true) {
 		hackTime = ns.getHackTime(serverName);
 		for (var i = 0; i < iterations; i++) {
-			ns.run('justhack.ns', (hsThreads > nthreads2h ? nthreads2h : hsThreads), serverName, i);
+			ns.run('justhack.js', (hsThreads > nthreads2h ? nthreads2h : hsThreads), serverName, i);
 			await ns.sleep(Math.ceil(hackTime / iterations));
 		}
 		await ns.sleep(100);
