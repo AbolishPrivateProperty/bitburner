@@ -3,35 +3,35 @@ export async function main(ns) {
 	const requiredFiles = {
 		singularity: {
 			file: 'singularityTools.js',
-			url: 'https://pastebin.com/raw/v6bAXA5Z',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/singularityTools.js',
 		},
 		purchase: {
 			file: 'purchaseServers.js',
-			url: 'https://pastebin.com/raw/XrFHRC5V',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/purchaseServers.js',
 		},
 		weakenIterator: {
 			file: 'weakenIterator.js',
-			url: 'https://pastebin.com/raw/5tGhafdN',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/weakenIterator.js',
 		},
 		weaken: {
 			file: 'weaken.js',
-			url: 'https://pastebin.com/raw/A5d49kwp',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/weaken.js',
 		},
 		hackIterator: {
 			file: 'hackIterator.js',
-			url: 'https://pastebin.com/raw/hCkfcjt7',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/hackIterator.js',
 		},
 		hack: {
 			file: 'justhack.js',
-			url: 'https://pastebin.com/raw/Z6dZj7ge',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/justhack.js',
 		},
 		growIterator: {
 			file: 'growIterator.js',
-			url: 'https://pastebin.com/raw/aq4yhFAG',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/growIterator.js',
 		},
 		grow: {
 			file: 'grow.js',
-			url: 'https://pastebin.com/raw/48M60iLQ',
+			url: 'https://raw.githubusercontent.com/AbolishPrivateProperty/bitburner/main/grow.js',
 		},
 	};
 
